@@ -1,0 +1,555 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Besher Alkurdi - NLP Research Engineer</title>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap"
+            rel="stylesheet"
+        />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+        <style>
+            :root {
+                --bg-color: #ffffff;
+                --text-color: #333333;
+                --accent-color: #f0f0f0;
+                --hover-color: #e0e0e0;
+            }
+
+            [data-theme="dark"] {
+                --bg-color: #1a1a1a;
+                --text-color: #f5f5f5;
+                --accent-color: #2a2a2a;
+                --hover-color: #3a3a3a;
+            }
+
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                transition: all 0.3s ease;
+            }
+
+            body {
+                font-family: "Roboto", sans-serif;
+                background-color: var(--bg-color);
+                color: var(--text-color);
+                line-height: 1.6;
+                overflow-x: hidden;
+            }
+
+            .container {
+                max-width: 800px;
+                margin: 0 auto;
+                padding: 2rem;
+            }
+
+            header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 2rem 0;
+            }
+
+            .profile {
+                display: flex;
+                align-items: center;
+                gap: 2rem;
+            }
+
+            .profile-image {
+                width: 100px;
+                height: 100px;
+                border-radius: 50%;
+                object-fit: cover;
+            }
+
+            h1 {
+                font-size: 2.5rem;
+                font-weight: 700;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+                font-weight: 300;
+                margin-top: 0.5rem;
+            }
+
+            .social-links {
+                display: flex;
+                gap: 1rem;
+            }
+
+            .social-links a {
+                color: var(--text-color);
+                font-size: 1.5rem;
+                text-decoration: none;
+            }
+
+            main {
+                display: flex;
+                flex-direction: column;
+                gap: 2rem;
+            }
+
+            section {
+                background-color: var(--accent-color);
+                padding: 2rem;
+                border-radius: 10px;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            }
+
+            h3 {
+                font-size: 1.8rem;
+                margin-bottom: 1rem;
+                border-bottom: 2px solid var(--text-color);
+                padding-bottom: 0.5rem;
+            }
+
+            ul {
+                list-style-type: none;
+            }
+
+            li {
+                margin-bottom: 1rem;
+            }
+
+            .theme-toggle {
+                background: none;
+                border: none;
+                color: var(--text-color);
+                font-size: 1.5rem;
+                cursor: pointer;
+            }
+
+            @media (max-width: 768px) {
+                .profile {
+                    flex-direction: column;
+                    text-align: center;
+                }
+
+                header {
+                    flex-direction: column;
+                    gap: 1rem;
+                }
+            }
+
+            /* Easter Egg */
+            .easter-egg {
+                position: fixed;
+                bottom: 20px;
+                right: 20px;
+                width: 40px;
+                height: 40px;
+                background-color: var(--accent-color);
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+                z-index: 1000;
+            }
+
+            .easter-egg:hover {
+                transform: scale(1.1);
+            }
+
+            .artistic-side {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.9);
+                display: none;
+                justify-content: center;
+                align-items: center;
+                z-index: 2000;
+            }
+
+            .artistic-content {
+                text-align: center;
+                color: white;
+            }
+
+            .close-artistic {
+                position: absolute;
+                top: 20px;
+                right: 20px;
+                color: white;
+                font-size: 2rem;
+                cursor: pointer;
+            }
+
+            #artistic-canvas {
+                border: 1px solid white;
+                cursor: pointer;
+            }
+
+            .quote {
+                font-style: italic;
+                margin-top: 20px;
+                max-width: 600px;
+            }
+
+            .ai-notice {
+                text-align: center;
+                padding: 20px 0;
+                font-size: 0.8rem;
+                color: var(--text-color);
+                opacity: 0.7;
+                font-style: italic;
+            }
+
+            #model-name {
+                display: inline-block;
+                min-width: 200px;
+            }
+
+            @keyframes flipUp {
+                0% {
+                    opacity: 0;
+                    transform: translateY(0%);
+                }
+                10% {
+                    opacity: 0;
+                    transform: translateY(20%);
+                }
+                30% {
+                    opacity: 1;
+                    transform: translateY(0%);
+                }
+                80% {
+                    opacity: 1;
+                    transform: translateY(0%);
+                }
+                100% {
+                    opacity: 0;
+                    transform: translateY(-20%);
+                }
+            }
+
+            #model-name {
+                animation: flipUp 5s infinite;
+            }
+
+            /* Animation for sections */
+            @keyframes fadeInUp {
+                from {
+                    opacity: 0;
+                    transform: translateY(20px);
+                }
+
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+
+            section {
+                animation: fadeInUp 0.5s ease-out;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="container">
+            <header>
+                <div class="profile">
+                    <img
+                        src="https://github.com/mrbesher.png"
+                        alt="Besher Alkurdi"
+                        class="profile-image"
+                    />
+                    <div>
+                        <h1>Besher Alkurdi</h1>
+                        <h2>NLP Research Engineer</h2>
+                    </div>
+                </div>
+                <div class="social-links">
+                    <a href="https://github.com/mrbesher" target="_blank"
+                        ><i class="fab fa-github"></i
+                    ></a>
+                    <a
+                        href="https://www.linkedin.com/in/mrbesher"
+                        target="_blank"
+                        ><i class="fab fa-linkedin"></i
+                    ></a>
+                    <a href="mailto:mrbesheralkurdi@outlook.com"
+                        ><i class="far fa-envelope"></i
+                    ></a>
+                    <button class="theme-toggle" id="theme-toggle">
+                        <i class="fas fa-adjust"></i>
+                    </button>
+                </div>
+            </header>
+
+            <main>
+                <section>
+                    <h3>Education</h3>
+                    <ul>
+                        <li>
+                            <strong>MSc. in Artificial Intelligence</strong>
+                            <p>University of Jyväskylä, Ongoing</p>
+                        </li>
+                        <li>
+                            <strong>B.S. in Computer Science</strong>
+                            <p>Yildiz Technical University, June 2023</p>
+                        </li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h3>Experience</h3>
+                    <ul>
+                        <li>
+                            <strong>Research Engineer at Huawei</strong>
+                            <p>Aug 2023 - Aug 2024</p>
+                        </li>
+                        <li>
+                            <strong>Undergraduate Research Fellow</strong>
+                            <p>
+                                Yildiz Technical University, June 2022 - March
+                                2023
+                            </p>
+                        </li>
+                        <li>
+                            <strong>Research Intern</strong>
+                            <p>
+                                New Mind Bilgi Yönetim Sistemleri, July 2021 -
+                                October 2021
+                            </p>
+                        </li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h3>Publications</h3>
+                    <ul>
+                        <li>
+                            <strong
+                                >Scaling Up Paraphrase Generation Datasets with
+                                MT and Semantic Similarity Filtering</strong
+                            >
+                            <p>2024, Springer International Publishing</p>
+                        </li>
+                        <li>
+                            <strong
+                                >Semantic Similarity Based Filtering for Turkish
+                                Paraphrase Dataset Creation</strong
+                            >
+                            <p>
+                                December 2022, Proceedings of the 5th
+                                International Conference on Natural Language and
+                                Speech Processing (ICNLSP 2022)
+                            </p>
+                        </li>
+                        <li>
+                            <strong
+                                >Linguistic-based Data Augmentation Approach for
+                                Offensive Language Detection</strong
+                            >
+                            <p>
+                                2022, 7th International Conference on Computer
+                                Science and Engineering (UBMK)
+                            </p>
+                        </li>
+                    </ul>
+                </section>
+            </main>
+        </div>
+
+        <div class="easter-egg" id="easter-egg">🎨</div>
+
+        <div class="artistic-side" id="artistic-side">
+            <div class="artistic-content">
+                <canvas id="artistic-canvas" width="600" height="400"></canvas>
+                <p class="quote">
+                    "The question of whether a computer can think is no more
+                    interesting than the question of whether a submarine can
+                    swim." - Edsger W. Dijkstra
+                </p>
+            </div>
+            <span class="close-artistic" id="close-artistic">&times;</span>
+        </div>
+
+        <script>
+            const themeToggle = document.getElementById("theme-toggle");
+            const body = document.body;
+
+            // Set initial theme based on OS preference
+            if (
+                window.matchMedia &&
+                window.matchMedia("(prefers-color-scheme: dark)").matches
+            ) {
+                body.dataset.theme = "dark";
+            } else {
+                body.dataset.theme = "light";
+            }
+
+            themeToggle.addEventListener("click", () => {
+                body.dataset.theme =
+                    body.dataset.theme === "dark" ? "light" : "dark";
+            });
+
+            // Easter Egg
+            const easterEgg = document.getElementById("easter-egg");
+            const artisticSide = document.getElementById("artistic-side");
+            const closeArtistic = document.getElementById("close-artistic");
+            const canvas = document.getElementById("artistic-canvas");
+            const ctx = canvas.getContext("2d");
+
+            easterEgg.addEventListener("click", () => {
+                artisticSide.style.display = "flex";
+                startNLPAnimation();
+            });
+
+            closeArtistic.addEventListener("click", () => {
+                artisticSide.style.display = "none";
+                cancelAnimationFrame(animationId);
+            });
+
+            let animationId;
+            const particles = [];
+            const words = [
+                "Heuristic",
+                "Cybernetics",
+                "Turing Test",
+                "Perceptron",
+                "Symbolic AI",
+                "Expert System",
+                "Logic Theorem",
+                "Machine Intelligence",
+                "Positronic Brain",
+                "Cognitive Architecture",
+                "Semantic Network",
+                "Frame Problem",
+                "Artificial Neural Network",
+                "Connectionism",
+                "Natural Language Processing",
+                "Knowledge Representation",
+                "Machine Learning",
+                "Artificial Life",
+            ];
+
+            function createParticle(x, y, word) {
+                return {
+                    x: x,
+                    y: y,
+                    radius: Math.random() * 3 + 1,
+                    word: word,
+                    vx: (Math.random() - 0.5) * 2,
+                    vy: (Math.random() - 0.5) * 2,
+                    hue: Math.random() * 360,
+                    createdAt: Date.now(),
+                };
+            }
+
+            function startNLPAnimation() {
+                particles.length = 0; // Clear existing particles
+                addNewWord();
+
+                canvas.addEventListener("click", onCanvasClick);
+
+                function animate() {
+                    ctx.fillStyle = "rgba(0, 0, 0, 0.3)";
+                    ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+                    const currentTime = Date.now();
+
+                    for (let i = 0; i < particles.length; i++) {
+                        const p = particles[i];
+                        ctx.beginPath();
+                        ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+                        ctx.fillStyle = `hsl(${p.hue}, 100%, 50%)`;
+                        ctx.fill();
+
+                        ctx.fillStyle = "white";
+                        ctx.font = "12px Arial";
+                        ctx.fillText(p.word, p.x + p.radius + 2, p.y);
+
+                        p.x += p.vx;
+                        p.y += p.vy;
+
+                        if (p.x < 0 || p.x > canvas.width) p.vx *= -1;
+                        if (p.y < 0 || p.y > canvas.height) p.vy *= -1;
+
+                        // Remove particles older than 10 seconds
+                        if (currentTime - p.createdAt > 15000) {
+                            particles.splice(i, 1);
+                            i--;
+                            continue;
+                        }
+
+                        // Draw connections
+                        for (let j = i + 1; j < particles.length; j++) {
+                            const p2 = particles[j];
+                            const dx = p.x - p2.x;
+                            const dy = p.y - p2.y;
+                            const distance = Math.sqrt(dx * dx + dy * dy);
+
+                            if (distance < 100) {
+                                ctx.beginPath();
+                                const alpha = 1 - distance / 100;
+                                ctx.strokeStyle = `hsla(${(p.hue + p2.hue) / 2}, 100%, 50%, ${alpha})`;
+                                ctx.lineWidth = alpha * 2;
+                                ctx.moveTo(p.x, p.y);
+                                ctx.lineTo(p2.x, p2.y);
+                                ctx.stroke();
+                            }
+                        }
+                    }
+
+                    animationId = requestAnimationFrame(animate);
+                }
+
+                animate();
+                setInterval(addNewWord, 5000);
+            }
+
+            function addNewWord() {
+                const word = words[Math.floor(Math.random() * words.length)];
+                particles.push(
+                    createParticle(
+                        Math.random() * canvas.width,
+                        Math.random() * canvas.height,
+                        word,
+                    ),
+                );
+            }
+
+            function onCanvasClick(event) {
+                const rect = canvas.getBoundingClientRect();
+                const x = event.clientX - rect.left;
+                const y = event.clientY - rect.top;
+
+                const newWord = words[Math.floor(Math.random() * words.length)];
+                particles.push(createParticle(x, y, newWord));
+            }
+        </script>
+
+        <footer class="ai-notice">
+            <p>Crafted with AI assistance:</p>
+            <span id="model-name"></span>
+        </footer>
+
+        <script>
+            const models = [
+                "claude-3-5-sonnet-20240620",
+                "qwen/qwen-2.5-72b-instruct",
+                "meta-llama/llama-3.1-70b-instruct",
+            ];
+            let currentModelIndex = 0;
+            const modelNameElement = document.getElementById("model-name");
+
+            function updateModelName() {
+                modelNameElement.textContent = models[currentModelIndex];
+                currentModelIndex = (currentModelIndex + 1) % models.length;
+            }
+
+            updateModelName();
+            setInterval(updateModelName, 5000);
+        </script>
+    </body>
+</html>
