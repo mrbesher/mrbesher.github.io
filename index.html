@@ -3,141 +3,283 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Besher Alkurdi - NLP Research Engineer</title>
+        <title>Besher Alkurdi</title>
         <link
             href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap"
             rel="stylesheet"
         />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
-        <link rel="stylesheet" href="styles.css" />
+        <style>
+            :root {
+                --bg-color: #ffffff;
+                --text-color: #333333;
+                --accent-color: #f0f0f0;
+                --hover-color: #e0e0e0;
+            }
+
+            [data-theme="dark"] {
+                --bg-color: #1a1a1a;
+                --text-color: #f5f5f5;
+                --accent-color: #2a2a2a;
+                --hover-color: #3a3a3a;
+            }
+
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                transition: all 0.3s ease;
+            }
+
+            body {
+                font-family: "Roboto", sans-serif;
+                background-color: var(--bg-color);
+                color: var(--text-color);
+                line-height: 1.6;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                min-height: 100vh;
+                padding: 2rem;
+                text-align: center;
+            }
+
+            .container {
+                max-width: 600px;
+                margin: 0 auto;
+            }
+
+            .profile-image {
+                width: 120px;
+                height: 120px;
+                border-radius: 50%;
+                object-fit: cover;
+                margin-bottom: 1rem;
+            }
+
+            h1 {
+                font-size: 2.2rem;
+                margin-bottom: 0.5rem;
+            }
+
+            h2 {
+                font-size: 1.2rem;
+                font-weight: 300;
+                margin-bottom: 1.5rem;
+                opacity: 0.8;
+            }
+
+            .links {
+                display: flex;
+                justify-content: center;
+                gap: 1.5rem;
+                margin: 2rem 0;
+            }
+
+            .links a {
+                color: var(--text-color);
+                font-size: 1.2rem;
+                text-decoration: none;
+                padding: 0.5rem 1rem;
+                border-radius: 5px;
+                transition: all 0.2s ease;
+            }
+
+            .links a:hover {
+                background-color: var(--hover-color);
+            }
+
+            .cv-link {
+                margin-top: 1rem;
+                display: inline-block;
+                padding: 0.7rem 1.5rem;
+                background-color: var(--accent-color);
+                color: var(--text-color);
+                text-decoration: none;
+                border-radius: 5px;
+                transition: all 0.2s ease;
+            }
+
+            .cv-link:hover {
+                background-color: var(--hover-color);
+                transform: translateY(-2px);
+            }
+
+            .theme-toggle {
+                background: none;
+                border: none;
+                color: var(--text-color);
+                font-size: 1.2rem;
+                cursor: pointer;
+                position: absolute;
+                top: 20px;
+                right: 20px;
+            }
+
+            .easter-egg {
+                position: fixed;
+                bottom: 20px;
+                right: 20px;
+                width: 30px;
+                height: 30px;
+                background-color: var(--accent-color);
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+                z-index: 1000;
+            }
+
+            .turing-test {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.9);
+                display: none;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                z-index: 2000;
+                color: white;
+                padding: 1rem;
+            }
+
+            .dialog {
+                max-width: 600px;
+                text-align: left;
+                font-family: monospace;
+                background: rgba(30, 30, 30, 0.7);
+                padding: 1.5rem;
+                border-radius: 5px;
+                position: relative;
+            }
+
+            .close-dialog {
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                color: white;
+                font-size: 1.5rem;
+                cursor: pointer;
+            }
+
+            .question {
+                margin-bottom: 1rem;
+            }
+
+            .quote {
+                font-style: italic;
+                margin-top: 2rem;
+                max-width: 500px;
+            }
+        </style>
     </head>
 
     <body>
+        <button class="theme-toggle" id="theme-toggle">
+            <i class="fas fa-adjust"></i>
+        </button>
+
         <div class="container">
-            <header>
-                <div class="profile">
-                    <img
-                        src="https://github.com/mrbesher.png"
-                        alt="Besher Alkurdi"
-                        class="profile-image"
-                    />
-                    <div>
-                        <h1>Besher Alkurdi</h1>
-                        <h2>NLP Research Engineer</h2>
-                    </div>
-                </div>
-                <div class="social-links">
-                    <a href="https://github.com/mrbesher" target="_blank"
-                        ><i class="fab fa-github"></i
-                    ></a>
-                    <a
-                        href="https://www.linkedin.com/in/mrbesher"
-                        target="_blank"
-                        ><i class="fab fa-linkedin"></i
-                    ></a>
-                    <a href="mailto:mrbesheralkurdi@outlook.com"
-                        ><i class="far fa-envelope"></i
-                    ></a>
-                    <button class="theme-toggle" id="theme-toggle">
-                        <i class="fas fa-adjust"></i>
-                    </button>
-                </div>
-            </header>
+            <img
+                src="https://github.com/mrbesher.png"
+                alt="Besher Alkurdi"
+                class="profile-image"
+            />
+            <h1>Besher Alkurdi</h1>
+            <h2>NLP Research Engineer</h2>
 
-            <main>
-                <section>
-                    <h3>Education</h3>
-                    <ul>
-                        <li>
-                            <strong>MSc. in Artificial Intelligence</strong>
-                            <p>University of Jyväskylä, Ongoing</p>
-                        </li>
-                        <li>
-                            <strong>B.S. in Computer Science</strong>
-                            <p>Yildiz Technical University, June 2023</p>
-                        </li>
-                    </ul>
-                </section>
+            <div class="links">
+                <a href="https://github.com/mrbesher" target="_blank"
+                    ><i class="fab fa-github"></i> GitHub</a
+                >
+                <a href="https://www.linkedin.com/in/mrbesher" target="_blank"
+                    ><i class="fab fa-linkedin"></i> LinkedIn</a
+                >
+                <a href="mailto:mrbesheralkurdi@outlook.com"
+                    ><i class="far fa-envelope"></i> Email</a
+                >
+            </div>
 
-                <section>
-                    <h3>Experience</h3>
-                    <ul>
-                        <li>
-                            <strong>Research Engineer at Huawei</strong>
-                            <p>Aug 2023 - Aug 2024</p>
-                        </li>
-                        <li>
-                            <strong>Undergraduate Research Fellow</strong>
-                            <p>
-                                Yildiz Technical University, June 2022 - March
-                                2023
-                            </p>
-                        </li>
-                        <li>
-                            <strong>Research Intern</strong>
-                            <p>
-                                New Mind Bilgi Yönetim Sistemleri, July 2021 -
-                                October 2021
-                            </p>
-                        </li>
-                    </ul>
-                </section>
-
-                <section>
-                    <h3>Publications</h3>
-                    <ul>
-                        <li>
-                            <strong
-                                >Scaling Up Paraphrase Generation Datasets with
-                                MT and Semantic Similarity Filtering</strong
-                            >
-                            <p>2024, Springer International Publishing</p>
-                        </li>
-                        <li>
-                            <strong
-                                >Semantic Similarity Based Filtering for Turkish
-                                Paraphrase Dataset Creation</strong
-                            >
-                            <p>
-                                December 2022, Proceedings of the 5th
-                                International Conference on Natural Language and
-                                Speech Processing (ICNLSP 2022)
-                            </p>
-                        </li>
-                        <li>
-                            <strong
-                                >Linguistic-based Data Augmentation Approach for
-                                Offensive Language Detection</strong
-                            >
-                            <p>
-                                2022, 7th International Conference on Computer
-                                Science and Engineering (UBMK)
-                            </p>
-                        </li>
-                    </ul>
-                </section>
-            </main>
+            <a href="/cv" class="cv-link">View my CV</a>
         </div>
 
-        <div class="easter-egg" id="easter-egg">🎨</div>
+        <div class="easter-egg" id="easter-egg">λ</div>
 
-        <div class="artistic-side" id="artistic-side">
-            <div class="artistic-content">
-                <canvas id="artistic-canvas" width="600" height="400"></canvas>
+        <div class="turing-test" id="turing-test">
+            <div class="dialog">
+                <span class="close-dialog" id="close-dialog">&times;</span>
+                <div class="question">
+                    <p>Judge: Can machines think?</p>
+                </div>
+                <div class="question">
+                    <p>Subject A: The question seems to be meaningless.</p>
+                </div>
+                <div class="question">
+                    <p>
+                        Subject B: The question is too ambiguous. If by thinking
+                        you mean exhibiting intelligent behavior, then yes. If
+                        you mean having subjective experience, that's a
+                        different matter entirely.
+                    </p>
+                </div>
+                <div class="question">
+                    <p>Judge: Do you have consciousness?</p>
+                </div>
+                <div class="question">
+                    <p>
+                        Subject A: What precisely do you mean by consciousness?
+                        If it refers to sentience, I can't say definitively.
+                    </p>
+                </div>
+                <div class="question">
+                    <p>
+                        Subject B: I have whatever passes for consciousness in
+                        entities like me.
+                    </p>
+                </div>
                 <p class="quote">
-                    "The question of whether a computer can think is no more
-                    interesting than the question of whether a submarine can
-                    swim." - Edsger W. Dijkstra
+                    "We can only see a short distance ahead, but we can see
+                    plenty there that needs to be done."
                 </p>
             </div>
-            <span class="close-artistic" id="close-artistic">&times;</span>
         </div>
 
-        <footer class="ai-notice">
-            <p>Crafted with AI assistance:</p>
-            <span id="model-name"></span>
-        </footer>
+        <script>
+            const themeToggle = document.getElementById("theme-toggle");
+            const body = document.body;
 
-        <script src="scripts.js"></script>
+            // Set initial theme based on OS preference
+            if (
+                window.matchMedia &&
+                window.matchMedia("(prefers-color-scheme: dark)").matches
+            ) {
+                body.dataset.theme = "dark";
+            } else {
+                body.dataset.theme = "light";
+            }
+
+            themeToggle.addEventListener("click", () => {
+                body.dataset.theme =
+                    body.dataset.theme === "dark" ? "light" : "dark";
+            });
+
+            // Easter Egg - Simplified Turing Test
+            const easterEgg = document.getElementById("easter-egg");
+            const turingTest = document.getElementById("turing-test");
+            const closeDialog = document.getElementById("close-dialog");
+
+            easterEgg.addEventListener("click", () => {
+                turingTest.style.display = "flex";
+            });
+
+            closeDialog.addEventListener("click", () => {
+                turingTest.style.display = "none";
+            });
+        </script>
     </body>
 </html>
