@@ -5,6 +5,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Besher Alkurdi - NLP Research Engineer</title>
 
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
         <!-- Bootstrap -->
         <link
             rel="stylesheet"
@@ -14,23 +19,23 @@
         <style>
             :root {
                 --bg-color: #ffffff;
-                --text-color: #1a1a1a;
-                --text-muted: #666666;
-                --border-color: #e5e5e5;
+                --text-color: #1f2937;
+                --text-muted: #6b7280;
+                --border-color: #e5e7eb;
                 --card-bg: #ffffff;
-                --hover-bg: #f8f9fa;
-                --shadow-color: rgba(0, 0, 0, 0.08);
+                --hover-bg: #f9fafb;
+                --shadow-color: rgba(0, 0, 0, 0.06);
             }
 
             @media (prefers-color-scheme: dark) {
                 :root {
-                    --bg-color: #0a0a0a;
-                    --text-color: #f5f5f5;
-                    --text-muted: #a0a0a0;
-                    --border-color: #2a2a2a;
-                    --card-bg: #111111;
-                    --hover-bg: #1a1a1a;
-                    --shadow-color: rgba(255, 255, 255, 0.05);
+                    --bg-color: #0f172a;
+                    --text-color: #f1f5f9;
+                    --text-muted: #94a3b8;
+                    --border-color: #334155;
+                    --card-bg: #1e293b;
+                    --hover-bg: #334155;
+                    --shadow-color: rgba(0, 0, 0, 0.25);
                 }
             }
 
@@ -41,40 +46,43 @@
             body {
                 background-color: var(--bg-color);
                 color: var(--text-color);
-                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-                line-height: 1.6;
+                font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+                line-height: 1.7;
                 font-weight: 400;
+                font-size: 16px;
             }
 
             .container {
-                max-width: 800px;
+                max-width: 850px;
                 background: var(--card-bg);
-                padding: 60px 50px;
-                border-radius: 2px;
-                box-shadow: 0 4px 20px var(--shadow-color);
+                padding: 4rem 3.5rem;
+                border-radius: 8px;
+                box-shadow: 0 10px 40px var(--shadow-color);
                 border: 1px solid var(--border-color);
             }
 
             h1 {
-                font-weight: 300;
-                font-size: 2.5rem;
-                letter-spacing: -0.5px;
+                font-weight: 600;
+                font-size: 2.75rem;
+                letter-spacing: -0.025em;
                 margin-bottom: 0.5rem;
+                color: var(--text-color);
             }
 
             h3 {
-                font-weight: 500;
-                font-size: 1.1rem;
+                font-weight: 600;
+                font-size: 1rem;
                 text-transform: uppercase;
-                letter-spacing: 0.5px;
+                letter-spacing: 0.05em;
                 margin-bottom: 1.5rem;
                 margin-top: 3rem;
+                color: var(--text-color);
             }
 
             h4 {
-                font-weight: 300;
+                font-weight: 400;
                 color: var(--text-muted);
-                font-size: 1.1rem;
+                font-size: 1.125rem;
             }
 
             .section-title {
@@ -93,11 +101,11 @@
 
             .contact-icons a {
                 color: var(--text-color);
-                font-weight: 400;
+                font-weight: 500;
                 text-decoration: none;
-                padding: 8px 0;
+                padding: 10px 0;
                 position: relative;
-                font-size: 0.95rem;
+                font-size: 1rem;
             }
 
             .contact-icons a::after {
@@ -126,9 +134,10 @@
             .entry-details {
                 text-align: right;
                 color: var(--text-muted);
-                font-size: 0.9rem;
+                font-size: 0.95rem;
                 white-space: nowrap;
                 flex-shrink: 0;
+                font-weight: 400;
             }
 
             .entry-content {
@@ -136,7 +145,8 @@
             }
 
             .entry strong {
-                font-weight: 500;
+                font-weight: 600;
+                color: var(--text-color);
             }
 
             ul {
@@ -146,9 +156,10 @@
             }
 
             li {
-                margin-bottom: 0.5rem;
-                font-size: 0.95rem;
-                line-height: 1.5;
+                margin-bottom: 0.625rem;
+                font-size: 1rem;
+                line-height: 1.6;
+                color: var(--text-color);
             }
 
             a {
@@ -170,18 +181,21 @@
             }
 
             .btn-outline-primary {
-                border: 1px solid var(--border-color);
+                border: 1.5px solid var(--border-color);
                 color: var(--text-color);
                 background: transparent;
-                font-size: 0.85rem;
-                padding: 8px 16px;
-                font-weight: 400;
+                font-size: 0.9rem;
+                padding: 10px 20px;
+                font-weight: 500;
+                border-radius: 6px;
             }
 
             .btn-outline-primary:hover {
                 background-color: var(--hover-bg);
                 border-color: var(--text-color);
                 color: var(--text-color);
+                transform: translateY(-1px);
+                box-shadow: 0 4px 12px var(--shadow-color);
             }
 
             .header-section {
@@ -198,8 +212,8 @@
 
             @media (max-width: 768px) {
                 .container {
-                    padding: 40px 30px;
-                    margin: 20px;
+                    padding: 2.5rem 2rem;
+                    margin: 1.5rem;
                 }
 
                 .entry {
@@ -319,7 +333,7 @@
                         <strong>Scaling Up Paraphrase Generation Datasets with MT and Semantic Similarity Filtering</strong>
                     </div>
                     <div class="entry-details">
-                        <a href="https://doi.org/10.1007/978-3-031-44260-5_2">[URL]</a><br>2024
+                        <a href="https://doi.org/10.1007/978-3-031-44260-5_2">[DOI]</a><br>2024
                     </div>
                 </div>
 
@@ -328,7 +342,7 @@
                         <strong>Semantic Similarity Based Filtering for Turkish Paraphrase Dataset Creation</strong>
                     </div>
                     <div class="entry-details">
-                        <a href="https://aclanthology.org/2022.icnlsp-1.14">[URL]</a><br>December 2022
+                        <a href="https://aclanthology.org/2022.icnlsp-1.14">[DOI]</a><br>December 2022
                     </div>
                 </div>
 
@@ -337,7 +351,7 @@
                         <strong>Linguistic-based Data Augmentation Approach for Offensive Language Detection</strong>
                     </div>
                     <div class="entry-details">
-                        <a href="https://doi.org/10.1109/UBMK55850.2022.9919562">[URL]</a><br>2022
+                        <a href="https://doi.org/10.1109/UBMK55850.2022.9919562">[DOI]</a><br>2022
                     </div>
                 </div>
             </section>
