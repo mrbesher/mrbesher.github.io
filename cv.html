@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Besher Alkurdi - NLP Research Engineer</title>
 
-        <!-- Bootstrap & FontAwesome -->
+        <!-- Bootstrap -->
         <link
             rel="stylesheet"
             href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
@@ -13,327 +13,359 @@
 
         <style>
             :root {
-                --primary-color: #1393d8;
-                --text-color: #333;
+                --bg-color: #ffffff;
+                --text-color: #1a1a1a;
+                --text-muted: #666666;
+                --border-color: #e5e5e5;
+                --card-bg: #ffffff;
+                --hover-bg: #f8f9fa;
+                --shadow-color: rgba(0, 0, 0, 0.08);
+            }
+
+            @media (prefers-color-scheme: dark) {
+                :root {
+                    --bg-color: #0a0a0a;
+                    --text-color: #f5f5f5;
+                    --text-muted: #a0a0a0;
+                    --border-color: #2a2a2a;
+                    --card-bg: #111111;
+                    --hover-bg: #1a1a1a;
+                    --shadow-color: rgba(255, 255, 255, 0.05);
+                }
+            }
+
+            * {
+                transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
             }
 
             body {
-                background-color: #f8f9fa;
-                font-family: Arial, sans-serif;
+                background-color: var(--bg-color);
+                color: var(--text-color);
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+                line-height: 1.6;
+                font-weight: 400;
             }
 
             .container {
-                max-width: 900px;
-                background: white;
-                padding: 30px;
-                border-radius: 10px;
-                box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+                max-width: 800px;
+                background: var(--card-bg);
+                padding: 60px 50px;
+                border-radius: 2px;
+                box-shadow: 0 4px 20px var(--shadow-color);
+                border: 1px solid var(--border-color);
             }
 
-            h1,
+            h1 {
+                font-weight: 300;
+                font-size: 2.5rem;
+                letter-spacing: -0.5px;
+                margin-bottom: 0.5rem;
+            }
+
             h3 {
-                font-weight: bold;
+                font-weight: 500;
+                font-size: 1.1rem;
+                text-transform: uppercase;
+                letter-spacing: 0.5px;
+                margin-bottom: 1.5rem;
+                margin-top: 3rem;
+            }
+
+            h4 {
+                font-weight: 300;
+                color: var(--text-muted);
+                font-size: 1.1rem;
             }
 
             .section-title {
-                color: var(--primary-color);
-                border-bottom: 2px solid var(--primary-color);
-                padding-bottom: 5px;
-                margin-bottom: 20px;
+                color: var(--text-color);
+                border-bottom: 1px solid var(--border-color);
+                padding-bottom: 8px;
+                margin-bottom: 2rem;
+            }
+
+            .contact-icons {
+                display: flex;
+                justify-content: center;
+                gap: 2rem;
+                flex-wrap: wrap;
             }
 
             .contact-icons a {
-                color: var(--primary-color);
-                margin-right: 15px;
-                transition: 0.3s;
+                color: var(--text-color);
+                font-weight: 400;
+                text-decoration: none;
+                padding: 8px 0;
+                position: relative;
+                font-size: 0.95rem;
             }
 
-            .contact-icons a:hover {
-                color: #116693;
+            .contact-icons a::after {
+                content: '';
+                position: absolute;
+                width: 0;
+                height: 1px;
+                bottom: 0;
+                left: 0;
+                background-color: var(--text-color);
+                transition: width 0.3s ease;
+            }
+
+            .contact-icons a:hover::after {
+                width: 100%;
             }
 
             .entry {
                 display: flex;
                 justify-content: space-between;
-                margin-bottom: 15px;
+                align-items: flex-start;
+                margin-bottom: 1rem;
+                gap: 2rem;
             }
 
             .entry-details {
                 text-align: right;
-                color: gray;
+                color: var(--text-muted);
+                font-size: 0.9rem;
+                white-space: nowrap;
+                flex-shrink: 0;
+            }
+
+            .entry-content {
+                flex: 1;
+            }
+
+            .entry strong {
+                font-weight: 500;
             }
 
             ul {
-                padding-left: 20px;
+                padding-left: 1.25rem;
+                margin-top: 0.75rem;
+                margin-bottom: 2rem;
+            }
+
+            li {
+                margin-bottom: 0.5rem;
+                font-size: 0.95rem;
+                line-height: 1.5;
             }
 
             a {
                 text-decoration: none;
-                color: var(--primary-color);
-                font-weight: bold;
+                color: var(--text-color);
+                font-weight: 400;
             }
 
             a:hover {
-                text-decoration: underline;
+                color: var(--text-color);
+                opacity: 0.7;
+            }
+
+            hr {
+                border: none;
+                height: 1px;
+                background-color: var(--border-color);
+                margin: 3rem 0;
+            }
+
+            .btn-outline-primary {
+                border: 1px solid var(--border-color);
+                color: var(--text-color);
+                background: transparent;
+                font-size: 0.85rem;
+                padding: 8px 16px;
+                font-weight: 400;
+            }
+
+            .btn-outline-primary:hover {
+                background-color: var(--hover-bg);
+                border-color: var(--text-color);
+                color: var(--text-color);
+            }
+
+            .header-section {
+                text-align: center;
+                margin-bottom: 3rem;
+                position: relative;
+            }
+
+            .pdf-download {
+                position: absolute;
+                top: 0;
+                right: 0;
+            }
+
+            @media (max-width: 768px) {
+                .container {
+                    padding: 40px 30px;
+                    margin: 20px;
+                }
+
+                .entry {
+                    flex-direction: column;
+                    gap: 0.5rem;
+                }
+
+                .entry-details {
+                    text-align: left;
+                    white-space: normal;
+                }
+
+                .contact-icons {
+                    gap: 1rem;
+                }
+
+                .pdf-download {
+                    position: static;
+                    margin-top: 1rem;
+                }
+
+                h1 {
+                    font-size: 2rem;
+                }
             }
         </style>
     </head>
     <body>
         <div class="container my-5">
-            <div class="position-relative text-center mb-4">
+            <div class="header-section">
                 <h1>Besher Alkurdi</h1>
-                <h4 class="text-muted">NLP Research Engineer</h4>
-                <div style="position: absolute; top: 0; right: 0">
+                <h4>NLP Research Engineer</h4>
+                <div class="pdf-download">
                     <a href="./cv.pdf" class="btn btn-outline-primary btn-sm">
-                        Download PDF Version
+                        Download PDF
                     </a>
                 </div>
             </div>
 
-            <hr />
-
             <section id="contact">
                 <h3 class="section-title">Contact & Socials</h3>
-                <div class="contact-icons text-center">
-                    <a href="https://github.com/mrbesher" target="_blank"
-                        >GitHub</a
-                    >
-                    <a
-                        href="https://www.linkedin.com/in/mrbesher"
-                        target="_blank"
-                        >LinkedIn</a
-                    >
+                <div class="contact-icons">
+                    <a href="https://github.com/mrbesher" target="_blank">GitHub</a>
+                    <a href="https://www.linkedin.com/in/mrbesher" target="_blank">LinkedIn</a>
                     <a href="mailto:mrbesheralkurdi@outlook.com">Email</a>
-                    <a href="https://huggingface.co/mrbesher" target="_blank"
-                        >HuggingFace</a
-                    >
-                    <a
-                        href="https://scholar.google.com/citations?user=TBLsDPEAAAAJ"
-                        target="_blank"
-                        >Google Scholar</a
-                    >
-                    <a
-                        href="https://www.youtube.com/@besheralkurdi"
-                        target="_blank"
-                        >YouTube</a
-                    >
+                    <a href="https://huggingface.co/mrbesher" target="_blank">HuggingFace</a>
+                    <a href="https://scholar.google.com/citations?user=TBLsDPEAAAAJ" target="_blank">Google Scholar</a>
+                    <a href="https://www.youtube.com/@besheralkurdi" target="_blank">YouTube</a>
                 </div>
             </section>
-
-            <hr />
 
             <section id="education">
                 <h3 class="section-title">Education</h3>
 
                 <div class="entry">
-                    <div>
-                        <strong>MSc. in Artificial Intelligence</strong> –
-                        University of Jyväskylä
+                    <div class="entry-content">
+                        <strong>MSc. in Artificial Intelligence</strong> – University of Jyväskylä
                     </div>
                     <div class="entry-details">Ongoing</div>
                 </div>
 
                 <div class="entry">
-                    <div>
-                        <strong>B.S. in Computer Science</strong> – Yildiz
-                        Technical University
+                    <div class="entry-content">
+                        <strong>B.S. in Computer Science</strong> – Yildiz Technical University
                     </div>
                     <div class="entry-details">
-                        June 2023 | GPA: 3.84/4.0 (2nd in class)
+                        June 2023<br>GPA: 3.84/4.0 (2nd in class)
                     </div>
                 </div>
             </section>
-
-            <hr />
 
             <section id="experience">
                 <h3 class="section-title">Experience</h3>
 
                 <div class="entry">
-                    <div><strong>Research Engineer</strong> – Huawei</div>
+                    <div class="entry-content"><strong>Research Engineer</strong> – Huawei</div>
                     <div class="entry-details">Aug 2023 - Aug 2024</div>
                 </div>
                 <ul>
-                    <li>
-                        Curated and synthesized data for fine-tuning in multiple
-                        languages tailored to customer requirements.
-                    </li>
-                    <li>
-                        Leveraged model and data parallelism with mixed
-                        precision for large language model fine-tuning.
-                    </li>
-                    <li>
-                        Enhanced the fine-tuning processes by implementing
-                        parameter-efficient training, advanced context
-                        expansion, retrieval-augmented generation, and sampling
-                        techniques.
-                    </li>
-                    <li>
-                        Created and maintained a versatile model serving
-                        platform for easy access to fine-tuned models via
-                        RESTful and streaming APIs.
-                    </li>
-                    <li>
-                        Implemented LLM architectures to run on different
-                        hardware and be compatible with different ML libraries.
-                    </li>
+                    <li>Curated and synthesized data for fine-tuning in multiple languages tailored to customer requirements.</li>
+                    <li>Leveraged model and data parallelism with mixed precision for large language model fine-tuning.</li>
+                    <li>Enhanced the fine-tuning processes by implementing parameter-efficient training, advanced context expansion, retrieval-augmented generation, and sampling techniques.</li>
+                    <li>Created and maintained a versatile model serving platform for easy access to fine-tuned models via RESTful and streaming APIs.</li>
+                    <li>Implemented LLM architectures to run on different hardware and be compatible with different ML libraries.</li>
                 </ul>
 
                 <div class="entry">
-                    <div>
-                        <strong>Undergraduate Research Fellow</strong> – Yildiz
-                        Technical University
+                    <div class="entry-content">
+                        <strong>Undergraduate Research Fellow</strong> – Yildiz Technical University
                     </div>
                     <div class="entry-details">June 2022 - March 2023</div>
                 </div>
                 <ul>
-                    <li>
-                        Investigated and implemented curriculum learning
-                        methods.
-                    </li>
-                    <li>
-                        Conducted research on data augmentation using several
-                        methods.
-                    </li>
-                    <li>
-                        Analyzed the impact of distributed training on the
-                        training process.
-                    </li>
-                    <li>
-                        Experimented with loss function modifications for deep
-                        neural networks.
-                    </li>
-                    <li>
-                        Trained multimodal models using contrastive learning.
-                    </li>
+                    <li>Investigated and implemented curriculum learning methods.</li>
+                    <li>Conducted research on data augmentation using several methods.</li>
+                    <li>Analyzed the impact of distributed training on the training process.</li>
+                    <li>Experimented with loss function modifications for deep neural networks.</li>
+                    <li>Trained multimodal models using contrastive learning.</li>
                 </ul>
 
                 <div class="entry">
-                    <div>
-                        <strong>Research Intern</strong> – New Mind Bilgi
-                        Yönetim Sistemleri
+                    <div class="entry-content">
+                        <strong>Research Intern</strong> – New Mind Bilgi Yönetim Sistemleri
                     </div>
                     <div class="entry-details">July 2021 - October 2021</div>
                 </div>
                 <ul>
-                    <li>
-                        Conducted research on state-of-the-art natural language
-                        processing techniques and their application in a system
-                        assisting lawyers in lawsuits, focusing on Document AI
-                        applications in the Turkish language.
-                    </li>
+                    <li>Conducted research on state-of-the-art natural language processing techniques and their application in a system assisting lawyers in lawsuits, focusing on Document AI applications in the Turkish language.</li>
                 </ul>
             </section>
-
-            <hr />
 
             <section id="publications">
                 <h3 class="section-title">Publications</h3>
 
                 <div class="entry">
-                    <div>
-                        <strong
-                            >Scaling Up Paraphrase Generation Datasets with MT
-                            and Semantic Similarity Filtering</strong
-                        >
+                    <div class="entry-content">
+                        <strong>Scaling Up Paraphrase Generation Datasets with MT and Semantic Similarity Filtering</strong>
                     </div>
                     <div class="entry-details">
-                        <a href="https://doi.org/10.1007/978-3-031-44260-5_2"
-                            >[DOI]</a
-                        >
-                        | 2024
+                        <a href="https://doi.org/10.1007/978-3-031-44260-5_2">[URL]</a><br>2024
                     </div>
                 </div>
 
                 <div class="entry">
-                    <div>
-                        <strong
-                            >Semantic Similarity Based Filtering for Turkish
-                            Paraphrase Dataset Creation</strong
-                        >
+                    <div class="entry-content">
+                        <strong>Semantic Similarity Based Filtering for Turkish Paraphrase Dataset Creation</strong>
                     </div>
                     <div class="entry-details">
-                        <a href="https://aclanthology.org/2022.icnlsp-1.14"
-                            >[DOI]</a
-                        >
-                        | December 2022
+                        <a href="https://aclanthology.org/2022.icnlsp-1.14">[URL]</a><br>December 2022
                     </div>
                 </div>
 
                 <div class="entry">
-                    <div>
-                        <strong
-                            >Linguistic-based Data Augmentation Approach for
-                            Offensive Language Detection</strong
-                        >
+                    <div class="entry-content">
+                        <strong>Linguistic-based Data Augmentation Approach for Offensive Language Detection</strong>
                     </div>
                     <div class="entry-details">
-                        <a href="https://doi.org/10.1109/UBMK55850.2022.9919562"
-                            >[DOI]</a
-                        >
-                        | 2022
+                        <a href="https://doi.org/10.1109/UBMK55850.2022.9919562">[URL]</a><br>2022
                     </div>
                 </div>
             </section>
-
-            <hr />
 
             <section id="certificates">
                 <h3 class="section-title">Certificates</h3>
                 <ul>
-                    <li>
-                        Deep Reinforcement Learning Course – Hugging Face (May
-                        2024)
-                    </li>
-                    <li>
-                        Generative Adversarial Networks (GANs) Specialization –
-                        DeepLearning.AI (July 2023)
-                    </li>
-                    <li>
-                        Natural Language Processing Specialization –
-                        DeepLearning.AI (June 2023)
-                    </li>
-                    <li>
-                        Deep Learning Specialization – DeepLearning.AI (February
-                        2023)
-                    </li>
-                    <li>
-                        Machine Learning Specialization – DeepLearning.AI
-                        (August 2022)
-                    </li>
-                    <li>
-                        Introduction to Computational Thinking and Data Science
-                        – edX (May 2021)
-                    </li>
+                    <li>Deep Reinforcement Learning Course – Hugging Face (May 2024)</li>
+                    <li>Generative Adversarial Networks (GANs) Specialization – DeepLearning.AI (July 2023)</li>
+                    <li>Natural Language Processing Specialization – DeepLearning.AI (June 2023)</li>
+                    <li>Deep Learning Specialization – DeepLearning.AI (February 2023)</li>
+                    <li>Machine Learning Specialization – DeepLearning.AI (August 2022)</li>
+                    <li>Introduction to Computational Thinking and Data Science – edX (May 2021)</li>
                 </ul>
                 <p>
-                    <strong>Verification:</strong> All certificates are
-                    verifiable at
+                    <strong>Verification:</strong> All certificates are verifiable at
                     <a href="https://www.linkedin.com/in/mrbesher">LinkedIn</a>.
                 </p>
             </section>
 
-            <hr />
-
             <section id="volunteer">
                 <h3 class="section-title">Volunteer Experience</h3>
                 <ul>
-                    <li>
-                        <strong>Schoolhouse.world, Tutor</strong> – February 28,
-                        2021 - Present
-                    </li>
-                    <li>
-                        <strong>Al-Aqsa Youth Institution, Tutor</strong> –
-                        November 30, 2020 - August 31, 2021
-                    </li>
-                    <li>
-                        <strong>Ask Me, Translator</strong> – June 30, 2019 -
-                        August 31, 2019
-                    </li>
+                    <li><strong>Schoolhouse.world, Tutor</strong> – February 28, 2021 - Present</li>
+                    <li><strong>Al-Aqsa Youth Institution, Tutor</strong> – November 30, 2020 - August 31, 2021</li>
+                    <li><strong>Ask Me, Translator</strong> – June 30, 2019 - August 31, 2019</li>
                 </ul>
             </section>
-
-            <hr />
 
             <section id="languages">
                 <h3 class="section-title">Languages</h3>
