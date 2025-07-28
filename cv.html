@@ -5,92 +5,350 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Besher Alkurdi - NLP Research Engineer</title>
 
-        <!-- Bootstrap & FontAwesome -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
+
         <link
             rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+            integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
         />
 
         <style>
             :root {
-                --primary-color: #1393d8;
-                --text-color: #333;
+                --bg-color: #f8f9fa;
+                --text-color: #212529;
+                --text-muted: #6c757d;
+                --border-color: #dee2e6;
+                --card-bg: #ffffff;
+                --hover-bg: #e9ecef;
+                --accent-color: #007bff;
+                --accent-hover-color: #0056b3;
+                --shadow-color: rgba(0, 0, 0, 0.075);
+            }
+
+            @media (prefers-color-scheme: dark) {
+                :root {
+                    --bg-color: #0d1117;
+                    --text-color: #c9d1d9;
+                    --text-muted: #8b949e;
+                    --border-color: #30363d;
+                    --card-bg: #161b22;
+                    --hover-bg: #1f242c;
+                    --accent-color: #58a6ff;
+                    --accent-hover-color: #2f81f7;
+                    --shadow-color: rgba(0, 0, 0, 0.3);
+                }
+            }
+
+            * {
+                box-sizing: border-box;
+                transition:
+                    background-color 0.2s ease,
+                    color 0.2s ease,
+                    border-color 0.2s ease;
             }
 
             body {
-                background-color: #f8f9fa;
-                font-family: Arial, sans-serif;
+                background-color: var(--bg-color);
+                color: var(--text-color);
+                font-family:
+                    "Inter",
+                    -apple-system,
+                    BlinkMacSystemFont,
+                    "Segoe UI",
+                    Roboto,
+                    sans-serif;
+                line-height: 1.7;
+                font-weight: 400;
+                font-size: 16px;
+                margin: 0;
+                padding: 0 0 2rem 0;
             }
 
             .container {
-                max-width: 900px;
-                background: white;
-                padding: 30px;
-                border-radius: 10px;
-                box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+                max-width: 850px;
+                background: var(--card-bg);
+                padding: 3rem 3.5rem;
+                border-radius: 12px;
+                box-shadow: 0 8px 32px var(--shadow-color);
+                border: 1px solid var(--border-color);
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 3rem;
+                margin-bottom: 3rem;
             }
 
-            h1,
-            h3 {
-                font-weight: bold;
+            h1 {
+                font-weight: 700;
+                font-size: 2.5rem;
+                letter-spacing: -0.02em;
+                margin-bottom: 0.5rem;
+                color: var(--text-color);
             }
 
-            .section-title {
-                color: var(--primary-color);
-                border-bottom: 2px solid var(--primary-color);
-                padding-bottom: 5px;
-                margin-bottom: 20px;
+            h3.section-title {
+                font-weight: 600;
+                font-size: 1.35rem;
+                text-transform: uppercase;
+                letter-spacing: 0.03em;
+                margin-bottom: 2rem;
+                padding-bottom: 0.75rem;
+                color: var(--text-color);
+                border-bottom: 2px solid var(--accent-color);
+            }
+
+            h4 {
+                font-weight: 500;
+                color: var(--text-muted);
+                font-size: 1.2rem;
+                margin-bottom: 0;
+            }
+
+            section {
+                padding-top: 2.5rem;
+            }
+            section:first-of-type {
+                padding-top: 1.5rem;
+            }
+
+            .contact-icons {
+                display: flex;
+                justify-content: center;
+                gap: 1.5rem;
+                flex-wrap: wrap;
+                margin-top: 0.5rem;
             }
 
             .contact-icons a {
-                color: var(--primary-color);
-                margin-right: 15px;
-                transition: 0.3s;
+                color: var(--text-muted);
+                font-weight: 500;
+                text-decoration: none;
+                padding: 8px 4px;
+                display: flex;
+                align-items: center;
+                gap: 0.6rem;
+                font-size: 0.95rem;
+                transition: color 0.2s ease;
             }
 
             .contact-icons a:hover {
-                color: #116693;
+                color: var(--accent-color);
+            }
+
+            .contact-icons a i {
+                font-size: 1.25rem;
+                width: 20px;
+                text-align: center;
             }
 
             .entry {
                 display: flex;
                 justify-content: space-between;
-                margin-bottom: 15px;
+                align-items: flex-start;
+                margin-bottom: 1.25rem;
+                gap: 1.5rem;
             }
 
             .entry-details {
                 text-align: right;
-                color: gray;
+                color: var(--text-muted);
+                font-size: 0.9rem;
+                white-space: nowrap;
+                flex-shrink: 0;
+                font-weight: 400;
+            }
+
+            .entry-content {
+                flex: 1;
+            }
+
+            .entry strong {
+                font-weight: 600;
+                color: var(--text-color);
+                font-size: 1.05rem;
+            }
+
+            #publications .entry strong {
+                font-weight: 500;
+                font-size: 1rem;
             }
 
             ul {
-                padding-left: 20px;
+                padding-left: 1.5rem;
+                margin-top: 0.5rem;
+                margin-bottom: 1.5rem;
+                list-style-type: disc;
+            }
+
+            li {
+                margin-bottom: 0.75rem;
+                font-size: 0.95rem;
+                line-height: 1.6;
+                color: var(--text-color);
+            }
+
+            #experience ul {
+                margin-bottom: 2rem;
+            }
+            #experience li,
+            #certificates li,
+            #volunteer li {
+                color: var(--text-muted);
             }
 
             a {
                 text-decoration: none;
-                color: var(--primary-color);
-                font-weight: bold;
+                color: var(--accent-color);
+                font-weight: 500;
+                transition:
+                    color 0.2s ease,
+                    opacity 0.2s ease;
             }
 
             a:hover {
+                color: var(--accent-hover-color);
                 text-decoration: underline;
+            }
+
+            .contact-icons a:hover {
+                text-decoration: none;
+            }
+
+            .btn-custom-outline {
+                padding: 8px 18px;
+                font-size: 0.9rem;
+                border: 1.5px solid var(--accent-color);
+                color: var(--accent-color);
+                background: transparent;
+                font-weight: 500;
+                border-radius: 6px;
+                text-decoration: none;
+                display: inline-block;
+                transition: all 0.2s ease-in-out;
+            }
+
+            .btn-custom-outline:hover {
+                background-color: var(--accent-color);
+                border-color: var(--accent-color);
+                color: var(--card-bg);
+                transform: translateY(-2px);
+                box-shadow: 0 4px 12px var(--shadow-color);
+                text-decoration: none;
+            }
+
+            .header-section {
+                text-align: center;
+                position: relative;
+            }
+
+            .pdf-download {
+                position: absolute;
+                top: 0;
+                right: 0;
+            }
+
+            #languages .languages-list {
+                color: var(--text-muted);
+                font-size: 0.95rem;
+                line-height: 1.7;
+            }
+
+            #languages .languages-list span {
+                display: inline;
+                white-space: nowrap;
+            }
+
+            #languages .languages-list strong {
+                color: var(--text-color);
+                font-weight: 600;
+            }
+
+            #languages .languages-list span:not(:last-child)::after {
+                content: " \00B7 ";
+                margin: 0 0.5em;
+                color: var(--text-muted);
+            }
+
+            @media (max-width: 768px) {
+                body {
+                    padding: 0;
+                }
+                .container {
+                    padding: 2rem 1.5rem;
+                    margin: 1rem;
+                    border-radius: 8px;
+                }
+
+                .entry {
+                    flex-direction: column;
+                    gap: 0.25rem;
+                    margin-bottom: 1rem;
+                }
+
+                .entry-details {
+                    text-align: left;
+                    white-space: normal;
+                    font-size: 0.85rem;
+                }
+
+                .contact-icons {
+                    gap: 0.5rem 1rem;
+                    justify-content: space-around;
+                }
+                .contact-icons a {
+                    font-size: 0.9rem;
+                }
+                .contact-icons a i {
+                    font-size: 1.1rem;
+                }
+
+                .pdf-download {
+                    position: static;
+                    margin-top: 1.5rem;
+                    text-align: center;
+                }
+
+                h1 {
+                    font-size: 2rem;
+                }
+                h3.section-title {
+                    font-size: 1.2rem;
+                }
+                h4 {
+                    font-size: 1.1rem;
+                }
+                #languages .languages-list {
+                    text-align: center;
+                }
+                #languages .languages-list span {
+                    display: inline-block;
+                    margin-bottom: 0.3rem;
+                }
             }
         </style>
     </head>
     <body>
-        <div class="container my-5">
-            <div class="position-relative text-center mb-4">
+        <div class="container">
+            <div class="header-section">
                 <h1>Besher Alkurdi</h1>
-                <h4 class="text-muted">NLP Research Engineer</h4>
-                <div style="position: absolute; top: 0; right: 0">
-                    <a href="./cv.pdf" class="btn btn-outline-primary btn-sm">
-                        Download PDF Version
+                <h4>NLP Research Engineer</h4>
+                <div class="pdf-download">
+                    <a href="./cv.pdf" class="btn-custom-outline">
+                        <i
+                            class="fas fa-file-pdf"
+                            style="margin-right: 0.3rem"
+                        ></i>
+                        Download PDF
                     </a>
                 </div>
             </div>
-
-            <hr />
 
             <section id="contact">
                 <h3 class="section-title">Contact & Socials</h3>
@@ -120,13 +378,11 @@
                 </div>
             </section>
 
-            <hr />
-
             <section id="education">
                 <h3 class="section-title">Education</h3>
 
                 <div class="entry">
-                    <div>
+                    <div class="entry-content">
                         <strong>MSc. in Artificial Intelligence</strong> –
                         University of Jyväskylä
                     </div>
@@ -134,23 +390,23 @@
                 </div>
 
                 <div class="entry">
-                    <div>
+                    <div class="entry-content">
                         <strong>B.S. in Computer Science</strong> – Yildiz
                         Technical University
                     </div>
                     <div class="entry-details">
-                        June 2023 | GPA: 3.84/4.0 (2nd in class)
+                        June 2023<br />GPA: 3.84/4.0 (2nd in class)
                     </div>
                 </div>
             </section>
-
-            <hr />
 
             <section id="experience">
                 <h3 class="section-title">Experience</h3>
 
                 <div class="entry">
-                    <div><strong>Research Engineer</strong> – Huawei</div>
+                    <div class="entry-content">
+                        <strong>Research Engineer</strong> – Huawei
+                    </div>
                     <div class="entry-details">Aug 2023 - Aug 2024</div>
                 </div>
                 <ul>
@@ -186,7 +442,7 @@
                 </ul>
 
                 <div class="entry">
-                    <div>
+                    <div class="entry-content">
                         <strong>Undergraduate Research Fellow</strong> – Yildiz
                         Technical University
                     </div>
@@ -226,58 +482,60 @@
                 </ul>
             </section>
 
-            <hr />
-
             <section id="publications">
                 <h3 class="section-title">Publications</h3>
 
                 <div class="entry">
-                    <div>
+                    <div class="entry-content">
                         <strong
                             >Scaling Up Paraphrase Generation Datasets with MT
                             and Semantic Similarity Filtering</strong
                         >
                     </div>
                     <div class="entry-details">
-                        <a href="https://doi.org/10.1007/978-3-031-44260-5_2"
-                            >[DOI]</a
-                        >
-                        | 2024
+                        <a
+                            href="https://doi.org/10.1007/978-3-031-44260-5_2"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            >doi.org/10.1007...</a
+                        ><br />2024
                     </div>
                 </div>
 
                 <div class="entry">
-                    <div>
+                    <div class="entry-content">
                         <strong
                             >Semantic Similarity Based Filtering for Turkish
                             Paraphrase Dataset Creation</strong
                         >
                     </div>
                     <div class="entry-details">
-                        <a href="https://aclanthology.org/2022.icnlsp-1.14"
-                            >[DOI]</a
-                        >
-                        | December 2022
+                        <a
+                            href="https://aclanthology.org/2022.icnlsp-1.14"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            >aclanthology.org/...</a
+                        ><br />December 2022
                     </div>
                 </div>
 
                 <div class="entry">
-                    <div>
+                    <div class="entry-content">
                         <strong
                             >Linguistic-based Data Augmentation Approach for
                             Offensive Language Detection</strong
                         >
                     </div>
                     <div class="entry-details">
-                        <a href="https://doi.org/10.1109/UBMK55850.2022.9919562"
-                            >[DOI]</a
-                        >
-                        | 2022
+                        <a
+                            href="https://doi.org/10.1109/UBMK55850.2022.9919562"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            >doi.org/10.1109...</a
+                        ><br />2022
                     </div>
                 </div>
             </section>
-
-            <hr />
 
             <section id="certificates">
                 <h3 class="section-title">Certificates</h3>
@@ -307,14 +565,17 @@
                         – edX (May 2021)
                     </li>
                 </ul>
-                <p>
+                <p style="font-size: 0.9rem; color: var(--text-muted)">
                     <strong>Verification:</strong> All certificates are
                     verifiable at
-                    <a href="https://www.linkedin.com/in/mrbesher">LinkedIn</a>.
+                    <a
+                        href="https://www.linkedin.com/in/mrbesher"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        >LinkedIn</a
+                    >.
                 </p>
             </section>
-
-            <hr />
 
             <section id="volunteer">
                 <h3 class="section-title">Volunteer Experience</h3>
@@ -341,20 +602,16 @@
                 </ul>
             </section>
 
-            <hr />
-
             <section id="languages">
                 <h3 class="section-title">Languages</h3>
-                <ul>
-                    <li><strong>Arabic</strong>: Native</li>
-                    <li><strong>English</strong>: Advanced</li>
-                    <li><strong>Turkish</strong>: Advanced</li>
-                    <li><strong>Finnish</strong>: Beginner</li>
-                    <li><strong>French</strong>: Beginner</li>
-                </ul>
+                <div class="languages-list">
+                    <span><strong>Arabic:</strong> Native</span>
+                    <span><strong>English:</strong> Advanced</span>
+                    <span><strong>Turkish:</strong> Advanced</span>
+                    <span><strong>Finnish:</strong> Beginner</span>
+                    <span><strong>French:</strong> Beginner</span>
+                </div>
             </section>
         </div>
-
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     </body>
 </html>
