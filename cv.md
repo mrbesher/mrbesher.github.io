@@ -122,19 +122,3 @@
 ### Translator at Ask Me
 *June 30, 2019 - August 31, 2019*
 - Assisted tourists visiting Istanbul as part of Fatih Municipality's "Voluntary Tourism Delegates" program.
-
----
-
-## Projects
-
-### Nano BERT and Decoder
-[GitHub: nanobert](https://github.com/mrbesher/nanobert) | [GitHub: nanodecoder](https://github.com/mrbesher/nanodecoder)
-A reimplementation of BERT with ALiBi trained on characters as tokens, and an ongoing work to implement a GPT architecture with enhancements like SwiGLU, RoPE, Pre-LN, RMSNorm, multi-head latent attention, and sparse mixture of experts to improve activation, positional encoding, normalization, inference efficiency, and dynamic input processing.
-
-### Gaze Tracking Robot
-[GitHub: gaze-tracking-robot](https://github.com/mrbesher/gaze-tracking-robot)
-Developed a Gaze Controlled Robot designed to empower individuals with disabilities to control wheelchairs using eye movements. Used ESP32, OpenCV, MediaPipe, and Tkinter.
-
-### The Genetic Art Forger
-[GitHub: genetic-art-forger](https://github.com/mrbesher/genetic-art-forger)
-An experiment with genetic algorithms to generate art. The project aimed to create an image starting from the bottom-left corner, without skipping any pixels (analogous to not lifting the "pencil").
