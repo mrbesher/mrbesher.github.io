@@ -77,6 +77,10 @@
 
 ## Certificates
 
+### Scratch to Scale: Large-Scale Training | Maven
+*October 2024*
+- Distributed training, DDP, ZeRO, Pipeline & Tensor Parallelism, Multi-Dimensional Parallelism.
+
 ### Deep Reinforcement Learning Course | HuggingFace
 *May 2024*
 - Q-Learning, PPO.
