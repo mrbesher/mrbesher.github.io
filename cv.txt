@@ -1,0 +1,131 @@
+BESHER ALKURDI
+NLP Research Engineer
+
+Location: Jyväskylä, Finland (Relocatable)
+Email: mrbesheralkurdi@outlook.com
+LinkedIn: https://www.linkedin.com/in/mrbesher
+GitHub: https://github.com/mrbesher
+Hugging Face: https://huggingface.co/mrbesher
+Google Scholar: https://scholar.google.com/citations?user=TBLsDPEAAAAJ
+YouTube: https://www.youtube.com/@besheralkurdi
+
+PROFESSIONAL EXPERIENCE
+
+Research Engineer
+Huawei
+August 2023 - August 2024
+- Enhanced custom in-house distributed training library with parameter-efficient methods, context expansion, and training stabilization techniques, achieving 8x resource reduction without performance degradation.
+- Conducted customer requirements analysis sessions, architected ML solutions for business needs, and defined PoC implementation roadmaps with cross-functional teams.
+- Coded LLM architectures enabling compatibility with standard libraries, delivering significant inference speedup.
+- Built scalable multi-backend inference platform with RESTful/streaming APIs, supporting scalable deployment and advanced sampling methods.
+- Wrote multilingual synthetic data generation toolkit and fine-tuning pipelines for customer LLM adaptations.
+- Ran ZeRO/FSDP/DeepSpeed multi-node training, tested models and supplied teams with improved data pipelines.
+
+Undergraduate Research Fellow
+Yildiz Technical University
+June 2022 - March 2023
+- Conducted curriculum learning research in a publicly funded project, implementing cyclical and difficulty-based training strategies.
+- Developed data augmentation pipeline and experimented with auxiliary classifiers for early exit strategies.
+- Deployed distributed training systems using TensorFlow, PyTorch, and Horovod on lab computers.
+- Trained CLIP-style multimodal models with contrastive learning.
+
+Research Intern
+New Mind AI
+July 2021 - October 2021
+- Conducted research on state-of-the-art natural language processing techniques and their application in a system assisting lawyers in lawsuits focusing on Document AI applications in the Turkish language.
+
+EDUCATION
+
+Master of Science in Artificial Intelligence
+University of Jyväskylä
+September 2024 - Present (Expected Graduation: 2026)
+Status: Thesis Phase
+
+Bachelor of Science in Computer Science
+Yildiz Technical University
+September 2019 - June 2023
+Achievements: 2nd in class, GPA: 3.84/4
+
+TECHNICAL SKILLS
+
+Machine Learning and Deep Learning: PyTorch, TensorFlow, HuggingFace, OpenCV, NLP, TRAX, ZeRO, FSDP, DeepSpeed
+Programming Languages: Python, C, Rust, SQL, Java
+Tools and Platforms: Linux, Git, GitHub, ROS, Docker
+
+PUBLICATIONS
+
+Scaling Up Paraphrase Generation Datasets with MT and Semantic Similarity Filtering (2024)
+- An extension of prior work. Experimented with data augmentation using paraphrasing.
+
+Semantic Similarity Based Filtering for Turkish Paraphrase Dataset Creation (December 2022)
+- A method for creating paraphrase datasets from parallel corpora along the largest paraphrase datasets in Turkish.
+
+Linguistic-based Data Augmentation Approach for Offensive Language Detection (2022)
+- Augment classification datasets with a linguistic-based approach improving the detection of offensive language.
+
+CERTIFICATIONS
+
+Scratch to Scale: Large-Scale Training
+Issuing Organization: Maven
+Date: October 2024
+Details: Distributed training, DDP, ZeRO, Pipeline & Tensor Parallelism, Multi-Dimensional Parallelism.
+
+Deep Reinforcement Learning Course
+Issuing Organization: HuggingFace
+Date: May 2024
+Details: Q-Learning, PPO.
+
+Generative Adversarial Networks (GANs) Specialization
+Issuing Organization: DeepLearning.AI
+Date: July 2023
+Details: GAN components, data augmentation, privacy.
+
+Natural Language Processing Specialization
+Issuing Organization: DeepLearning.AI
+Date: June 2023
+Details: NLP, Transformers, Attention models, Machine Translation.
+
+Deep Learning Specialization
+Issuing Organization: DeepLearning.AI
+Date: February 2023
+Details: Deep learning, including GANs and VAEs.
+
+Machine Learning Specialization
+Issuing Organization: DeepLearning.AI
+Date: August 2022
+Details: ML fundamentals and practical applications.
+
+Introduction to Computational Thinking and Data Science
+Issuing Organization: edX
+Date: May 2021
+Details: Introductory course in data science and ML.
+
+LANGUAGES
+
+Arabic: Native
+English: Advanced
+Turkish: Advanced
+Finnish: Beginner
+French: Beginner
+
+VOLUNTEERING
+
+Volunteer Researcher
+COSMOS AI Research Group
+December 2024 – Present
+- Conducting research on improving the performance of large language and vision-language models using unlabeled data and reinforcement learning without reliance on stronger teacher supervision.
+
+Tutor
+Schoolhouse.world
+February 2021 - May 2021
+- Tutoring students worldwide in subjects such as Math, Computer Science, and more.
+
+Tutor
+Aqsa Youth Institution
+November 2020 - August 2021
+- Taught computer, networking, and programming basics to middle school and high school refugee students.
+
+Translator
+Ask Me (Voluntary Tourism Delegates)
+June 2019 - August 2019
+- Assisted tourists visiting Istanbul as part of Fatih Municipality's program.
