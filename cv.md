@@ -11,7 +11,7 @@
 
 ### Research Assistant and Teacher at University of Jyvaskyla
 *Nov 2025 - Present*
-- Built multimodal AI pipeline for video and audio analysis as part of "The Rhythm of Life" research project.
+- Contributed to multimodal AI pipeline for video and audio analysis as part of "The Rhythm of Life" research project.
 - Managed NLP course for AI students including project supervision and assessment.
 
 ### Research Engineer at Huawei

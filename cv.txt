@@ -14,7 +14,7 @@ PROFESSIONAL EXPERIENCE
 Research Assistant and Teacher
 University of Jyvaskyla
 November 2025 - Present
-- Built multimodal AI pipeline for video and audio analysis as part of "The Rhythm of Life" research project.
+- Contributed to multimodal AI pipeline for video and audio analysis as part of "The Rhythm of Life" research project.
 - Managed NLP course for AI students including project supervision and assessment.
 
 Research Engineer
