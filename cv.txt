@@ -1,5 +1,5 @@
 BESHER ALKURDI
-NLP Research Engineer
+AI Engineer specializing in Generative AI systems, efficient inference, and deployment
 
 Location: Jyväskylä, Finland (Relocatable)
 Email: mrbesheralkurdi@outlook.com
@@ -11,121 +11,81 @@ YouTube: https://www.youtube.com/@besheralkurdi
 
 PROFESSIONAL EXPERIENCE
 
+Research Assistant and Teacher
+University of Jyvaskyla
+November 2025 - Present
+- Built multimodal AI pipeline for video and audio analysis as part of "The Rhythm of Life" research project.
+- Managed NLP course for AI students including project supervision and assessment.
+
 Research Engineer
 Huawei
 August 2023 - August 2024
-- Enhanced custom in-house distributed training library with parameter-efficient methods, context expansion, and training stabilization techniques, achieving 8x resource reduction without performance degradation.
-- Conducted customer requirements analysis sessions, architected ML solutions for business needs, and defined PoC implementation roadmaps with cross-functional teams.
-- Coded LLM architectures enabling compatibility with standard libraries, delivering significant inference speedup.
-- Built scalable multi-backend inference platform with RESTful/streaming APIs, supporting scalable deployment and advanced sampling methods.
-- Wrote multilingual synthetic data generation toolkit and fine-tuning pipelines for customer LLM adaptations.
-- Ran ZeRO/FSDP/DeepSpeed multi-node training, tested models and supplied teams with improved data pipelines.
+- Enhanced distributed training library with PEFT, context expansion, and stabilization techniques using ZeRO, FSDP, DeepSpeed, achieving 8x resource reduction.
+- Optimized model architectures for standard library compatibility and built scalable multi-backend inference platform with RESTful and streaming APIs.
+- Developed multilingual synthetic data generation toolkit and fine-tuning pipelines for customer adaptations.
+- Conducted requirements analysis and defined PoC roadmaps with cross-functional teams.
 
 Undergraduate Research Fellow
 Yildiz Technical University
 June 2022 - March 2023
-- Conducted curriculum learning research in a publicly funded project, implementing cyclical and difficulty-based training strategies.
-- Developed data augmentation pipeline and experimented with auxiliary classifiers for early exit strategies.
-- Deployed distributed training systems using TensorFlow, PyTorch, and Horovod on lab computers.
-- Trained CLIP-style multimodal models with contrastive learning.
+- Curriculum learning research in publicly funded project using TensorFlow, PyTorch, and Horovod for difficulty-based training strategies.
+- Trained CLIP-style multimodal models with contrastive learning and experimented with auxiliary classifiers for early exit strategies.
 
 Research Intern
 New Mind AI
 July 2021 - October 2021
-- Conducted research on state-of-the-art natural language processing techniques and their application in a system assisting lawyers in lawsuits focusing on Document AI applications in the Turkish language.
+- Researched SOTA NLP techniques for a Document AI system assisting lawyers with Turkish legal documents.
 
 EDUCATION
 
-Master of Science in Artificial Intelligence
-University of Jyväskylä
-September 2024 - Present (Expected Graduation: 2026)
-Status: Thesis Phase
+MSc. Artificial Intelligence | University of Jyvaskyla | Thesis Phase
 
-Bachelor of Science in Computer Science
-Yildiz Technical University
-September 2019 - June 2023
-Achievements: 2nd in class, GPA: 3.84/4
-
-TECHNICAL SKILLS
-
-Machine Learning and Deep Learning: PyTorch, TensorFlow, HuggingFace, OpenCV, NLP, TRAX, ZeRO, FSDP, DeepSpeed
-Programming Languages: Python, C, Rust, SQL, Java
-Tools and Platforms: Linux, Git, GitHub, ROS, Docker
+BSc. Computer Science | Yildiz Technical University (2nd in class, GPA: 3.84/4) | June 2023
 
 PUBLICATIONS
 
 Scaling Up Paraphrase Generation Datasets with MT and Semantic Similarity Filtering (2024)
-- An extension of prior work. Experimented with data augmentation using paraphrasing.
 
 Semantic Similarity Based Filtering for Turkish Paraphrase Dataset Creation (December 2022)
-- A method for creating paraphrase datasets from parallel corpora along the largest paraphrase datasets in Turkish.
 
 Linguistic-based Data Augmentation Approach for Offensive Language Detection (2022)
-- Augment classification datasets with a linguistic-based approach improving the detection of offensive language.
 
 CERTIFICATIONS
 
-Scratch to Scale: Large-Scale Training
-Issuing Organization: Maven
-Date: October 2024
-Details: Distributed training, DDP, ZeRO, Pipeline & Tensor Parallelism, Multi-Dimensional Parallelism.
+Large-Scale Training | Maven | October 2025
 
-Deep Reinforcement Learning Course
-Issuing Organization: HuggingFace
-Date: May 2024
-Details: Q-Learning, PPO.
+Deep RL Course | HuggingFace | May 2024
 
-Generative Adversarial Networks (GANs) Specialization
-Issuing Organization: DeepLearning.AI
-Date: July 2023
-Details: GAN components, data augmentation, privacy.
+GANs Specialization | DeepLearning.AI | July 2023
 
-Natural Language Processing Specialization
-Issuing Organization: DeepLearning.AI
-Date: June 2023
-Details: NLP, Transformers, Attention models, Machine Translation.
+NLP Specialization | DeepLearning.AI | June 2023
 
-Deep Learning Specialization
-Issuing Organization: DeepLearning.AI
-Date: February 2023
-Details: Deep learning, including GANs and VAEs.
+Deep Learning Specialization | DeepLearning.AI | February 2023
 
-Machine Learning Specialization
-Issuing Organization: DeepLearning.AI
-Date: August 2022
-Details: ML fundamentals and practical applications.
-
-Introduction to Computational Thinking and Data Science
-Issuing Organization: edX
-Date: May 2021
-Details: Introductory course in data science and ML.
+ML Specialization | DeepLearning.AI | August 2022
 
 LANGUAGES
 
-Arabic: Native
-English: Advanced
-Turkish: Advanced
-Finnish: Beginner
-French: Beginner
+Arabic (Native) - English (Advanced) - Turkish (Advanced) - Finnish (Beginner) - French (Beginner)
 
 VOLUNTEERING
 
 Volunteer Researcher
 COSMOS AI Research Group
-December 2024 – Present
-- Conducting research on improving the performance of large language and vision-language models using unlabeled data and reinforcement learning without reliance on stronger teacher supervision.
+December 2024 - Present
+- Researching LLM/VLM performance using unlabeled data and RL; co-trained the strongest Turkish encoder based on ModernBERT architecture.
 
 Tutor
 Schoolhouse.world
 February 2021 - May 2021
-- Tutoring students worldwide in subjects such as Math, Computer Science, and more.
+- Tutored students worldwide in Math, Computer Science, and related subjects.
 
 Tutor
 Aqsa Youth Institution
 November 2020 - August 2021
-- Taught computer, networking, and programming basics to middle school and high school refugee students.
+- Taught computer, networking, and programming basics to middle and high school refugee students.
 
 Translator
-Ask Me (Voluntary Tourism Delegates)
+Ask Me
 June 2019 - August 2019
-- Assisted tourists visiting Istanbul as part of Fatih Municipality's program.
+- Assisted tourists visiting Istanbul as part of Fatih Municipality volunteer program.
