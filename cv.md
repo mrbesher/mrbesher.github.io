@@ -3,7 +3,7 @@
 
 [GitHub](https://github.com/mrbesher) | [LinkedIn](https://www.linkedin.com/in/mrbesher) | [Hugging Face](https://huggingface.co/mrbesher) | [Google Scholar](https://scholar.google.com/citations?user=TBLsDPEAAAAJ) | [YouTube](https://www.youtube.com/@besheralkurdi)
 
-[Email](mailto:mrbesheralkurdi@outlook.com) | Location: Jyväskylä, Finland (Relocatable)
+Location: Jyväskylä, Finland
 
 ---
 
@@ -87,7 +87,7 @@ Arabic (Native) - English (Advanced) - Turkish (Advanced) - Finnish (Beginner) -
 
 ### Volunteer Researcher at COSMOS AI Research Group
 *Dec 2024 - Present*
-- Researching LLM/VLM performance using unlabeled data and RL; co-trained the strongest Turkish encoder based on ModernBERT architecture.
+- Co-trained [state-of-the-art Turkish text encoder](https://cosmos-ytu.github.io/modernbert-tr-1k/); researching LLM/VLM performance using unlabeled data and RL.
 
 ### Tutor at Schoolhouse.world
 *Feb 2021 - May 2021*
