@@ -35,7 +35,7 @@ Location: Jyväskylä, Finland
 ## Education
 
 ### MSc. Artificial Intelligence at University of Jyvaskyla
-*Jun 2026*
+*May 2026*
 
 ### BSc. Computer Science at Yildiz Technical University (2nd in class, GPA: 3.84/4)
 *Jun 2023*
