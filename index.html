@@ -1,282 +1,111 @@
 <!doctype html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Besher Alkurdi</title>
-        <link
-            href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap"
-            rel="stylesheet"
-        />
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
-        <style>
-            :root {
-                --bg-color: #ffffff;
-                --text-color: #333333;
-                --accent-color: #f0f0f0;
-                --hover-color: #e0e0e0;
-            }
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Besher Alkurdi</title>
+<meta name="description" content="Besher Alkurdi, NLP research engineer. Blog, presentations, artifacts, videos, CV.">
+<link rel="canonical" href="https://mrbesher.com/">
+<meta property="og:title" content="Besher Alkurdi">
+<meta property="og:description" content="NLP research engineer. Blog, presentations, artifacts, videos, CV.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://mrbesher.com/">
+<meta name="theme-color" content="#F7F6F3" id="meta-theme-color">
+<link rel="preload" href="/assets/fonts/fraunces.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/main.css">
+<script>
+/* First-paint theme: manual override, else coarse solar elevation at Jyvaskyla. */
+(function () {
+  try {
+    var r = document.documentElement;
+    r.className += ' js';
+    var t = null;
+    var forced = location.search.match(/[?&]theme=(light|dark)/);
+    if (forced) t = forced[1];
+    if (!t) { try { t = localStorage.getItem('theme'); } catch (e) {} }
+    var mode = t ? 'manual' : 'auto';
+    if (!t) {
+      var d = new Date();
+      var doy = (d - Date.UTC(d.getUTCFullYear(), 0, 0)) / 864e5;
+      var dec = -23.44 * Math.cos(2 * Math.PI * (doy + 10) / 365) * Math.PI / 180;
+      var lat = 62.2426 * Math.PI / 180;
+      var minsUTC = d.getUTCHours() * 60 + d.getUTCMinutes();
+      var ha = (((minsUTC + 4 * 25.7473) % 1440) / 4 - 180) * Math.PI / 180;
+      var el = Math.asin(Math.sin(lat) * Math.sin(dec) + Math.cos(lat) * Math.cos(dec) * Math.cos(ha));
+      t = el > -0.02 ? 'light' : 'dark';
+    }
+    r.dataset.theme = t;
+    r.dataset.themeMode = mode;
+  } catch (e) {}
+})();
+</script>
+</head>
+<body>
 
-            [data-theme="dark"] {
-                --bg-color: #1a1a1a;
-                --text-color: #f5f5f5;
-                --accent-color: #2a2a2a;
-                --hover-color: #3a3a3a;
-            }
+<canvas class="bg-layer" id="bg-1" aria-hidden="true"></canvas>
+<canvas class="bg-layer" id="bg-2" aria-hidden="true"></canvas>
+<canvas class="flower-layer" id="garden" aria-hidden="true"></canvas>
 
-            * {
-                margin: 0;
-                padding: 0;
-                box-sizing: border-box;
-                transition: all 0.3s ease;
-            }
+<header class="masthead">
+  <div class="id">
+    <h1 class="name">Besher Alkurdi</h1>
+    <p class="socials" aria-label="Elsewhere">
+      <a href="https://github.com/mrbesher">GitHub<span class="arr">&#8599;</span></a>
+      <a href="https://www.linkedin.com/in/mrbesher">LinkedIn<span class="arr">&#8599;</span></a>
+      <a href="https://huggingface.co/mrbesher">Hugging Face<span class="arr">&#8599;</span></a>
+      <a href="https://scholar.google.com/citations?user=TBLsDPEAAAAJ">Scholar<span class="arr">&#8599;</span></a>
+      <a href="https://www.youtube.com/@besheralkurdi">YouTube<span class="arr">&#8599;</span></a>
+    </p>
+  </div>
+  <div class="controls">
+    <button id="theme-toggle" class="ctl" type="button" title="Theme. Follows Jyväskylä daylight; hold to re-sync.">
+      <svg class="ic-sun" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><circle cx="8" cy="8" r="3.2" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M8 1.2v1.8M8 13v1.8M1.2 8H3M13 8h1.8M3.2 3.2l1.3 1.3M11.5 11.5l1.3 1.3M12.8 3.2l-1.3 1.3M4.5 11.5l-1.3 1.3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+      <svg class="ic-moon" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M13.2 9.8A5.4 5.4 0 0 1 6.2 2.8a5.4 5.4 0 1 0 7 7Z" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>
+      <span class="auto-dot" aria-hidden="true"></span>
+    </button>
+  </div>
+</header>
 
-            body {
-                font-family: "Roboto", sans-serif;
-                background-color: var(--bg-color);
-                color: var(--text-color);
-                line-height: 1.6;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                min-height: 100vh;
-                padding: 2rem;
-                text-align: center;
-            }
+<main>
+  <nav class="directory" aria-label="Site">
+    <ol class="dir-list">
+      <li>
+        <span class="entry">
+          <a class="word" href="/cv.pdf">CV</a>
+          <span class="meta meta-links"><a href="/cv.txt">txt</a></span>
+        </span>
+      </li>
+      <li>
+        <a class="entry" href="/blog/">
+          <span class="word">Blog</span>
+        </a>
+      </li>
+      <li>
+        <a class="entry" href="/presentations/">
+          <span class="word">Presentations</span>
+        </a>
+      </li>
+      <li>
+        <a class="entry" href="/videos/">
+          <span class="word">Videos</span>
+        </a>
+      </li>
+      <li>
+        <a class="entry" href="/emberforge/">
+          <span class="word">Emberforge</span>
+        </a>
+      </li>
+      <li>
+        <a class="entry" href="/smol-recipes/">
+          <span class="word">Smol Recipes</span>
+        </a>
+      </li>
+    </ol>
+  </nav>
+</main>
 
-            .container {
-                max-width: 600px;
-                margin: 0 auto;
-            }
-
-            .profile-image {
-                width: 120px;
-                height: 120px;
-                border-radius: 50%;
-                object-fit: cover;
-                margin-bottom: 1rem;
-            }
-
-            h1 {
-                font-size: 2.2rem;
-                margin-bottom: 0.5rem;
-            }
-
-            h2 {
-                font-size: 1.2rem;
-                font-weight: 300;
-                margin-bottom: 1.5rem;
-                opacity: 0.8;
-            }
-
-            .links {
-                display: flex;
-                justify-content: center;
-                gap: 1.5rem;
-                margin: 2rem 0;
-            }
-
-            .links a {
-                color: var(--text-color);
-                font-size: 1.2rem;
-                text-decoration: none;
-                padding: 0.5rem 1rem;
-                border-radius: 5px;
-                transition: all 0.2s ease;
-            }
-
-            .links a:hover {
-                background-color: var(--hover-color);
-            }
-
-            .cv-link {
-                margin-top: 1rem;
-                display: inline-block;
-                padding: 0.7rem 1.5rem;
-                background-color: var(--accent-color);
-                color: var(--text-color);
-                text-decoration: none;
-                border-radius: 5px;
-                transition: all 0.2s ease;
-            }
-
-            .cv-link:hover {
-                background-color: var(--hover-color);
-                transform: translateY(-2px);
-            }
-
-            .theme-toggle {
-                background: none;
-                border: none;
-                color: var(--text-color);
-                font-size: 1.2rem;
-                cursor: pointer;
-                position: absolute;
-                top: 20px;
-                right: 20px;
-            }
-
-            .easter-egg {
-                position: fixed;
-                bottom: 20px;
-                right: 20px;
-                width: 30px;
-                height: 30px;
-                background-color: var(--accent-color);
-                border-radius: 50%;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                cursor: pointer;
-                z-index: 1000;
-            }
-
-            .turing-test {
-                position: fixed;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                background-color: rgba(0, 0, 0, 0.9);
-                display: none;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                z-index: 2000;
-                color: white;
-                padding: 1rem;
-            }
-
-            .dialog {
-                max-width: 600px;
-                text-align: left;
-                font-family: monospace;
-                background: rgba(30, 30, 30, 0.7);
-                padding: 1.5rem;
-                border-radius: 5px;
-                position: relative;
-            }
-
-            .close-dialog {
-                position: absolute;
-                top: 10px;
-                right: 10px;
-                color: white;
-                font-size: 1.5rem;
-                cursor: pointer;
-            }
-
-            .question {
-                margin-bottom: 1rem;
-            }
-
-            .quote {
-                font-style: italic;
-                margin-top: 2rem;
-                max-width: 500px;
-            }
-        </style>
-    </head>
-
-    <body>
-        <button class="theme-toggle" id="theme-toggle">
-            <i class="fas fa-adjust"></i>
-        </button>
-
-        <div class="container">
-            <img
-                src="https://github.com/mrbesher.png"
-                alt="Besher Alkurdi"
-                class="profile-image"
-            />
-            <h1>Besher Alkurdi</h1>
-            <h2>NLP Research Engineer</h2>
-
-            <div class="links">
-                <a href="https://github.com/mrbesher" target="_blank"
-                    ><i class="fab fa-github"></i> GitHub</a
-                >
-                <a href="https://www.linkedin.com/in/mrbesher" target="_blank"
-                    ><i class="fab fa-linkedin"></i> LinkedIn</a
-                >
-            </div>
-
-            <a href="/cv.pdf" class="cv-link" target="_blank">View my CV</a>
-        </div>
-
-        <div class="easter-egg" id="easter-egg">λ</div>
-
-        <div class="turing-test" id="turing-test">
-            <div class="dialog">
-                <span class="close-dialog" id="close-dialog">&times;</span>
-                <div class="question">
-                    <p>Judge: Can machines think?</p>
-                </div>
-                <div class="question">
-                    <p>Subject A: The question seems to be meaningless.</p>
-                </div>
-                <div class="question">
-                    <p>
-                        Subject B: The question is too ambiguous. If by thinking
-                        you mean exhibiting intelligent behavior, then yes. If
-                        you mean having subjective experience, that's a
-                        different matter entirely.
-                    </p>
-                </div>
-                <div class="question">
-                    <p>Judge: Do you have consciousness?</p>
-                </div>
-                <div class="question">
-                    <p>
-                        Subject A: What precisely do you mean by consciousness?
-                        If it refers to sentience, I can't say definitively.
-                    </p>
-                </div>
-                <div class="question">
-                    <p>
-                        Subject B: I have whatever passes for consciousness in
-                        entities like me.
-                    </p>
-                </div>
-                <p class="quote">
-                    "We can only see a short distance ahead, but we can see
-                    plenty there that needs to be done."
-                </p>
-            </div>
-        </div>
-
-        <script>
-            const themeToggle = document.getElementById("theme-toggle");
-            const body = document.body;
-
-            // Set initial theme based on OS preference
-            if (
-                window.matchMedia &&
-                window.matchMedia("(prefers-color-scheme: dark)").matches
-            ) {
-                body.dataset.theme = "dark";
-            } else {
-                body.dataset.theme = "light";
-            }
-
-            themeToggle.addEventListener("click", () => {
-                body.dataset.theme =
-                    body.dataset.theme === "dark" ? "light" : "dark";
-            });
-
-            // Easter Egg - Simplified Turing Test
-            const easterEgg = document.getElementById("easter-egg");
-            const turingTest = document.getElementById("turing-test");
-            const closeDialog = document.getElementById("close-dialog");
-
-            easterEgg.addEventListener("click", () => {
-                turingTest.style.display = "flex";
-            });
-
-            closeDialog.addEventListener("click", () => {
-                turingTest.style.display = "none";
-            });
-        </script>
-    </body>
+<script src="/assets/marbling.js" defer></script>
+<script src="/assets/flower.js" defer></script>
+<script src="/assets/main.js" defer></script>
+</body>
 </html>
