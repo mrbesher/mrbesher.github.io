@@ -9,15 +9,15 @@ Location: Jyväskylä, Finland
 
 ## Experience
 
-### Research Assistant and Teacher at University of Jyvaskyla
-*Nov 2025 - Present*
-- Contributed to multimodal AI pipeline for video and audio analysis as part of "The Rhythm of Life" research project.
+### AI Engineer at University of Jyvaskyla
+*Nov 2025 - Jul 2026*
+- Migrated a multimodal AI pipeline for video and audio analysis from on-premise to Google Cloud Platform; worked on the async Python/FastAPI backend with Cloud Run, Cloud SQL, GCS, Cloud Tasks, Cloud Scheduler, Secret Manager, and Vertex AI.
 - Managed NLP course for AI students including project supervision and assessment.
 
-### Research Engineer at Huawei
+### AI Engineer at Huawei
 *Aug 2023 - Aug 2024*
 - Enhanced distributed training library with PEFT, context expansion, and stabilization techniques using ZeRO, FSDP, DeepSpeed, achieving 8x resource reduction.
-- Optimized model architectures for standard library compatibility and built scalable multi-backend inference platform with RESTful and streaming APIs.
+- Optimized model architectures for open-source library compatibility and built scalable multi-backend inference platform with RESTful and streaming APIs.
 - Developed multilingual synthetic data generation toolkit and fine-tuning pipelines for customer adaptations.
 - Conducted requirements analysis and defined PoC roadmaps with cross-functional teams.
 
@@ -37,7 +37,7 @@ Location: Jyväskylä, Finland
 ### MSc. Artificial Intelligence at University of Jyvaskyla
 *May 2026*
 
-### BSc. Computer Science at Yildiz Technical University (2nd in class, GPA: 3.84/4)
+### BSc. Computer Engineering at Yildiz Technical University (2nd in class, GPA: 3.84/4)
 *Jun 2023*
 
 ---
@@ -45,7 +45,7 @@ Location: Jyväskylä, Finland
 ## Publications
 
 ### Scaling Up Paraphrase Generation Datasets with MT and Semantic Similarity Filtering
-*2024*
+*2023*
 
 ### Semantic Similarity Based Filtering for Turkish Paraphrase Dataset Creation
 *Dec 2022*
@@ -57,7 +57,7 @@ Location: Jyväskylä, Finland
 
 ## Languages
 
-Arabic (Native) - English (Advanced) - Turkish (Advanced) - Finnish (Beginner) - French (Beginner)
+Arabic (Native) - English (Fluent) - Turkish (Fluent) - Finnish (Intermediate) - French (Beginner)
 
 ---
 
@@ -87,7 +87,7 @@ Arabic (Native) - English (Advanced) - Turkish (Advanced) - Finnish (Beginner) -
 
 ### Volunteer Researcher at COSMOS AI Research Group
 *Dec 2024 - Present*
-- Co-trained [state-of-the-art Turkish text encoder](https://cosmos-ytu.github.io/modernbert-tr-1k/); researching LLM/VLM performance using unlabeled data and RL.
+- Co-trained [state-of-the-art Turkish text encoder](https://cosmos-ytu.github.io/modernbert-tr/); researching LLM/VLM performance using unlabeled data and RL.
 
 ### Tutor at Schoolhouse.world
 *Feb 2021 - May 2021*

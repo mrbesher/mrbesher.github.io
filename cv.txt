@@ -10,17 +10,17 @@ YouTube: https://www.youtube.com/@besheralkurdi
 
 PROFESSIONAL EXPERIENCE
 
-Research Assistant and Teacher
+AI Engineer
 University of Jyvaskyla
-November 2025 - Present
-- Contributed to multimodal AI pipeline for video and audio analysis as part of "The Rhythm of Life" research project.
+November 2025 - July 2026
+- Migrated a multimodal AI pipeline for video and audio analysis from on-premise to Google Cloud Platform; worked on the async Python/FastAPI backend with Cloud Run, Cloud SQL, GCS, Cloud Tasks, Cloud Scheduler, Secret Manager, and Vertex AI.
 - Managed NLP course for AI students including project supervision and assessment.
 
-Research Engineer
+AI Engineer
 Huawei
 August 2023 - August 2024
 - Enhanced distributed training library with PEFT, context expansion, and stabilization techniques using ZeRO, FSDP, DeepSpeed, achieving 8x resource reduction.
-- Optimized model architectures for standard library compatibility and built scalable multi-backend inference platform with RESTful and streaming APIs.
+- Optimized model architectures for open-source library compatibility and built scalable multi-backend inference platform with RESTful and streaming APIs.
 - Developed multilingual synthetic data generation toolkit and fine-tuning pipelines for customer adaptations.
 - Conducted requirements analysis and defined PoC roadmaps with cross-functional teams.
 
@@ -39,11 +39,11 @@ EDUCATION
 
 MSc. Artificial Intelligence | University of Jyvaskyla | May 2026
 
-BSc. Computer Science | Yildiz Technical University (2nd in class, GPA: 3.84/4) | June 2023
+BSc. Computer Engineering | Yildiz Technical University (2nd in class, GPA: 3.84/4) | June 2023
 
 PUBLICATIONS
 
-Scaling Up Paraphrase Generation Datasets with MT and Semantic Similarity Filtering (2024)
+Scaling Up Paraphrase Generation Datasets with MT and Semantic Similarity Filtering (2023)
 
 Semantic Similarity Based Filtering for Turkish Paraphrase Dataset Creation (December 2022)
 
@@ -65,14 +65,14 @@ ML Specialization | DeepLearning.AI | August 2022
 
 LANGUAGES
 
-Arabic (Native) - English (Advanced) - Turkish (Advanced) - Finnish (Beginner) - French (Beginner)
+Arabic (Native) - English (Fluent) - Turkish (Fluent) - Finnish (Intermediate) - French (Beginner)
 
 VOLUNTEERING
 
 Volunteer Researcher
 COSMOS AI Research Group
 December 2024 - Present
-- Co-trained state-of-the-art Turkish text encoder (https://cosmos-ytu.github.io/modernbert-tr-1k/); researching LLM/VLM performance using unlabeled data and RL.
+- Co-trained state-of-the-art Turkish text encoder (https://cosmos-ytu.github.io/modernbert-tr/); researching LLM/VLM performance using unlabeled data and RL.
 
 Tutor
 Schoolhouse.world
